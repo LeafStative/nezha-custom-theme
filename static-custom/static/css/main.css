@@ -508,7 +508,7 @@ footer p {
 
 /* 五色旗 */
 .fi-foc {
-    background-image: url(/static/theme-server-status/img/foc.png);
+    background-image: url(/static/custom/img/foc.png);
 }
 
 @media only screen and (max-width: 767px) {
