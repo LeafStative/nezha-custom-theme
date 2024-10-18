@@ -1,4 +1,4 @@
-{{define "theme-custom/footer"}}
+{{define "theme-server-status-modified/footer"}}
     </section>
     <footer class="container-fluid">
         <p>{{ .Conf.Site.Brand }} | Theme ServerStatus | Powered by <a target="_blank" href="https://github.com/naiba/nezha">{{tr "NezhaMonitoring"}}</a> {{.Version}}</p>
@@ -28,8 +28,8 @@
         </span>
     </aside>
     <template v-if="semiTransparent">
-        <link rel="stylesheet" href="/static/custom/css/light.plus.css?v20241103">
-    	<link rel="stylesheet" href="/static/custom/css/dark.plus.css?v20241103"> 
+        <link rel="stylesheet" href="/static/theme-server-status-modified/css/light.plus.css?v20241103">
+    	<link rel="stylesheet" href="/static/theme-server-status-modified/css/dark.plus.css?v20241103"> 
     </template>
 </div>
 {{if ts .CustomCode}}{{.CustomCode|safe}}{{end}}

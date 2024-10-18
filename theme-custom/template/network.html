@@ -1,6 +1,6 @@
-{{define "theme-custom/network"}}
-{{template "theme-custom/header" .}}
-{{template "theme-custom/menu" .}}
+{{define "theme-server-status-modified/network"}}
+{{template "theme-server-status-modified/header" .}}
+{{template "theme-server-status-modified/menu" .}}
 <div class="container-fluid content network-box">
     <div class="network-box-header btn-group">
         <div class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -18,7 +18,7 @@
     <div v-if="chartTitle" class="chartTitle" @click="showCharts(nextServerId)"><i class="chartCountryCode" :class="'fi fi-' + chartCountryCode"></i> @#chartTitle#@</div>
     <div id="chartbox" style="width:100%;height:auto;"></div>
 </div>
-{{template "theme-custom/footer" .}}
+{{template "theme-server-status-modified/footer" .}}
 <script>
     new Vue({
         el: '#app',
