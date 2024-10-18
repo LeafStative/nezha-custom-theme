@@ -506,9 +506,9 @@ footer p {
     }
 }
 
-/* 彩虹旗 */
-.fi-rb {
-    background-image: url(/static/theme-server-status/img/rb.png);
+/* 五色旗 */
+.fi-foc {
+    background-image: url(/static/theme-server-status/img/foc.png);
 }
 
 @media only screen and (max-width: 767px) {
