@@ -1,8 +1,8 @@
 {
-    "name": "Custom",
-    "description": "My Custom Theme",
-    "maintainer": "Noname <example@example.com>",
-    "repo": "https://example.com/custom-theme.git",
+    "name": "LeafStative's ServerStatus",
+    "description": "ServerStatus modified by LeafStative",
+    "maintainer": "LeafStative <hath@leafstative.net>",
+    "repo": "https://github.com/LeafStative/nezha-custom-theme",
     "version": "0.0.1",
     "support_versions": "latest"
 }
