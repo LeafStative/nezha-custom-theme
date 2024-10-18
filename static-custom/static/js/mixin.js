@@ -4,12 +4,12 @@ const mixinsVue = {
         isMobile: false,
         theme: "light",
         isSystemTheme: false,
-        showGroup: false,
+        showGroup: true,
         showGoTop: false,
         showTools: false,
         preferredTemplate: null,
         semiTransparent: false,
-        staticUrl: '/static/theme-server-status',
+        staticUrl: '/static/theme-custom',
         adaptedTemplates: [
             { key: 'default', name: 'Default', icon: 'th large' },
             { key: 'angel-kanade', name: 'AngelKanade', icon: 'square' },
@@ -22,7 +22,6 @@ const mixinsVue = {
     created() {
         this.isMobile = this.checkIsMobile();
         this.theme = this.initTheme();
-        this.showGroup = this.initShowGroup();
         this.semiTransparent = this.initSemiTransparent();
         this.preferredTemplate = this.getCookie('preferred_theme') ? this.getCookie('preferred_theme') : this.$root.defaultTemplate;
         this.colors = this.theme == "dark" ? this.colorsDark : this.colorsLight;
@@ -61,17 +60,8 @@ const mixinsVue = {
                 this.reloadCharts(); // 重新载入echarts图表
             }
         },
-        initShowGroup() {
-            const storedShowGroup = localStorage.getItem("showGroup");
-            const showGroup = storedShowGroup !== null ? JSON.parse(storedShowGroup) : false;
-            if (storedShowGroup === null) {
-                localStorage.setItem("showGroup", showGroup);
-            }
-            return showGroup;
-        },
         toggleShowGroup() {
             this.showGroup = !this.showGroup;
-            localStorage.setItem("showGroup", this.showGroup);
             if (this.$root.page == 'service') {
                 this.$root.initTooltip();
             }
